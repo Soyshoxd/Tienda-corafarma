@@ -6,7 +6,7 @@ import asepxia from "@/assets/asepxia.png"
 const Lomejor = () => {
     return (
         <div className='flex gap-1 flex-col'>
-            <h1 className='text-center text-red-700'>Lo mejor de lo mejor</h1>
+            <h1 className='text-center text-2xl font-bold text-red-600 m-2'>Lo mejor de lo mejor</h1>
             <div className='flex flex-row items-center gap-0.5'>
                 <Image src={lubri} alt="lubri.png" className='w-30 h-30' />
                 <Image src={rexona} alt="rexona.jpeg" className='w-30 h-30' />

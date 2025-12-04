@@ -9,20 +9,24 @@ import Maps from '@/components/maps'
 import Preguntas from '@/components/preguntas'
 import Footer from '@/components/footer'
 import React from 'react'
+import Nav from '@/components/nav'
+import BrandSlider from '@/components/slider-marcas'
 const Home = () => {
   return (
-    <div className="bg-gray-300 bg-cover bg-center w-full h-screen">
+    <div >
       <Navbar />
       <Slider />
-       <h1 className='text-center'>¡Todo en un click!</h1>
-      <Categorias />
-      <Recomedados />
-      <Buscado />
-      <Ofertas />
-      <Lomejor />
-      <Maps />
-      <Preguntas />
-      <Footer/>
+      <div className="bg-gray-100 bg-cover bg-center bg-no-repeat bg-[url('/assets/fondo.png')]">
+        <h1 className='text-center text-2xl font-bold text-red-600 m-2'>¡Todo en un click!</h1>
+        <Categorias />
+        <Recomedados />
+        <Buscado />
+        <Ofertas />
+        <BrandSlider />
+        <Maps />
+        <Preguntas />
+      </div>
+      <Footer />
     </div>
   )
 }

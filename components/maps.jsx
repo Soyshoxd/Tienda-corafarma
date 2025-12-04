@@ -3,7 +3,7 @@ import Link from 'next/link'
 const Maps = () => {
     return (
         <div className='flex gap-1 flex-col'>
-            <h1 className='text-center text-red-700'>Encuentranos aquí</h1>
+            <h1 className='text-center text-2xl font-bold text-red-600 m-2'>Encuentranos aquí</h1>
             <div className='m-2.5 h-70'>
                 <iframe
                     title="Ubicación Drogueria Corafarma"
@@ -24,7 +24,7 @@ const Maps = () => {
                         href="https://maps.app.goo.gl/1oFtuLf4sXS6zhBW7"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-block bg-red-600 hover:bg-red-700 text-white font-semibold rounded shadow transition duration-200 text-[9px] md:text-base p-1 w-full text-center">
+                        className="mt-2 inline-block bg-red-600 hover:bg-red-700 text-white font-semibold rounded shadow transition duration-200 text-[18px] md:text-base p-1 w-full text-center">
                         Ver en Google Maps
                     </Link>
                 </div>
