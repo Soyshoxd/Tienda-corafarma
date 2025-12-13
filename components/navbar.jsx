@@ -32,7 +32,7 @@ const Navbar = () => {
     return (
         <header className="w-full bg-white shadow-md fixed top-0 left-0 z-50">
             <nav className='max-w-6xl mx-auto flex items-center justify-between p-4'>
-                <Image src={logo} alt="Logo" className="w-[50px] h-[50px] object-contain" />
+              <Link href="/"><Image src={logo} alt="Logo" className="w-[50px] h-[50px] object-contain" /></Link>
                 <input
                     className="w-[50%] rounded-full h-10 p-3 bg-gray-300 "
                     type="text"
@@ -45,7 +45,7 @@ const Navbar = () => {
                     <li>Ofertas</li>
                 </ul>
                 <div className="flex gap-3">
-                    <CgShoppingCart className='text-2xl' />
+                  <Link href="/carrito"><CgShoppingCart className='text-2xl' /></Link>
                     <FaRegHeart className='text-2xl' />
 
                     <button className='md:hidden flex flex-col gap-1 z-50' onClick={() => setOpen(!open)}>
@@ -90,8 +90,7 @@ const Navbar = () => {
 
                         </ul>
                         <span className='block w-full mt-9 h-1 bg-red-700'/>
-                    </div>
-                    
+                    </div>  
                 </div>
             </nav>
         </header>

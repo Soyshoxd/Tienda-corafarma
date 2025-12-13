@@ -5,7 +5,7 @@ import { FaShoppingCart } from "react-icons/fa";
 const Carproducto = () => {
   return (
     <div className=' flex flex-row gap-2'>
-       <div className='rounded-md bg-white shadow-lg hi p-2 h-66 w-40'>
+       <div className='rounded-md bg-white shadow-lg p-2 h-66 w-40'>
        <Image src={dolex} alt="dolex.webp h-5 w-5 "/>
         <p className='text-gray-400 text-[11px]'>Medicamentos</p>
         <h1 className='font-bold text-sm'>Dolex Gripa</h1>

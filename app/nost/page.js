@@ -9,7 +9,7 @@ const Pages = () => {
   return (
     <div>
       <Navbar />
-      <div className='flex justify-center flex-col'>
+      <div className='flex justify-center flex-col mt-20'>
         <h1 className='text-center text-red-500 text-xl font-extrabold mt-2'>Sobre Nosotros</h1>
         <p className='mt-2 ml-3 mr-3'>En nuestra drogueria no solo encuentras medicamentos, encuentras confianza, cuidado y cercanía. Cada día trabajamos para que tengas a la mano todo lo que necesitas: salud, belleza, bienestar y productos de uso diario, siempre con una atención rápida y amable.
 

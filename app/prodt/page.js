@@ -9,7 +9,7 @@ const Page = () => {
   return (
     <div>
       <Navbar />
-      <div className='ml-2 text-xs text-neutral-600'>
+      <div className='ml-2 text-xs text-neutral-600 mt-24'>
         <h1>Inicio | Tienda | Licores</h1>
       </div>
       <div className='items-center m-3'>
@@ -43,7 +43,7 @@ const Page = () => {
           Filtrar por:
         </button>
       </div>
-      <div className='grid grid-cols-3 ml-3 mr-3 mt-3'>
+      <div className='grid grid-cols-3 ml-3 mr-3 mt-3 gap-2'>
         <Carproducto />
         <Carproducto />
         <Carproducto />

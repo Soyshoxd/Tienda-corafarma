@@ -24,7 +24,7 @@ const Maps = () => {
                         href="https://maps.app.goo.gl/1oFtuLf4sXS6zhBW7"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="mt-2 inline-block bg-red-600 hover:bg-red-700 text-white font-semibold rounded shadow transition duration-200 text-[18px] md:text-base p-1 w-full text-center">
+                        className="mt-2 inline-block bg-red-600 hover:bg-red-700 text-white font-semibold rounded-full shadow transition duration-200 text-[18px] md:text-base p-1 w-full text-center">
                         Ver en Google Maps
                     </Link>
                 </div>
