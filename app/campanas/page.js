@@ -8,7 +8,9 @@ import Carproducto from '@/components/carproducto'
 import licor from "@/assets/licor.png"
 import maquillaje from "@/assets/maquillaje.png"
 import Footer from '@/components/footer'
-const Page = () => {
+import { getProductos } from '@/lib/firebase-cache'
+const Page = async () => {
+  const productos = await getProductos()
   return (
     <div>
       <Navbar />
@@ -20,12 +22,20 @@ const Page = () => {
           <Image src={dulce} alt='dulce' className='mx-auto' />
         </div>
         <div className='w-35 h-35 flex items-center justify-center'>
-          <Carproducto />
+          {productos.map(producto => (
+            <Carproducto
+              key={producto.id}
+              producto={producto}
+            />
+          ))}
         </div>
       </div>
       <div className='mt-22 flex gap-4 items-center justify-center'>
         <div className='w-35 h-35 flex items-center justify-center'>
-          <Carproducto />
+          <Carproducto
+            key={producto.id}
+            producto={producto}
+          />
         </div>
         <div className='w-40 h-40 flex items-center justify-center'>
           <Image src={licor} alt='licor' className='mx-auto' />
@@ -36,7 +46,10 @@ const Page = () => {
           <Image src={maquillaje} alt='maquillaje' className='mx-auto' />
         </div>
         <div className='w-35 h-35 flex items-center justify-center'>
-          <Carproducto />
+          <Carproducto
+            key={producto.id}
+            producto={producto}
+          />
         </div>
       </div>
       <div className='mt-10'>

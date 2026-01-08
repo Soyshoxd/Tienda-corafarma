@@ -4,8 +4,10 @@ import { FaFilter } from "react-icons/fa"
 import React from 'react'
 import Carproducto from '@/components/carproducto'
 import Footer from '@/components/footer'
+import { getProductos } from '@/lib/firebase-cache'
 
-const Page = () => {
+const Page = async () => {
+  const productos = await getProductos()
   return (
     <div>
       <Navbar />
@@ -44,19 +46,18 @@ const Page = () => {
         </button>
       </div>
       <div className='grid grid-cols-3 ml-3 mr-3 mt-3 gap-2'>
-        <Carproducto />
-        <Carproducto />
-        <Carproducto />
-        <Carproducto />
-        <Carproducto />
-        <Carproducto />
-        <Carproducto />
+        {productos.map(producto => (
+          <Carproducto
+            key={producto.id}
+            producto={producto}
+          />
+        ))}
       </div>
       <div className='ml-5'>
         <p>mostrando 1-10 de 17 productos</p>
       </div>
       <div className='mt-5'>
-          <Footer/>
+        <Footer />
       </div>
     </div>
   )
