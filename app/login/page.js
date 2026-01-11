@@ -5,9 +5,11 @@ import { signInWithEmailAndPassword, GoogleAuthProvider, signInWithPopup } from 
 import { auth, db } from "@/lib/firebase"
 import { doc, getDoc, setDoc, serverTimestamp } from "firebase/firestore"
 import { useRouter } from "next/navigation"
+import { FaRegUserCircle } from "react-icons/fa";
+import { FaGoogle } from "react-icons/fa";
 
 export default function LoginPage() {
-    //Estados para el formulario
+  //Estados para el formulario
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
   const [loading, setLoading] = useState(false)
@@ -62,10 +64,12 @@ export default function LoginPage() {
 
   return (
     <div className="max-w-sm mx-auto mt-10 space-y-4">
-      <form onSubmit={handleLogin}>
-        <h1 className="text-xl mb-4">Iniciar sesión</h1>
-
-        <input
+      <form onSubmit={handleLogin} className="flex flex-col items-center">
+        <div className="flex flex-col justify-center items-center">
+          <FaRegUserCircle className="ml-2 text-8xl text-red-600 mb-2.5" />
+          <h1 className="text-xl text-center font-bold mb-3">Iniciar sesión</h1>
+        </div>
+        <input className="border-b-2 w-[92%] m-3"
           type="email"
           placeholder="Email"
           value={email}
@@ -73,15 +77,14 @@ export default function LoginPage() {
           required
         />
 
-        <input
+        <input className="border-b-2 w-[92%] m-3"
           type="password"
           placeholder="Contraseña"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
           required
         />
-
-        <button disabled={loading}>
+        <button className="bg-red-600 w-50 h-8 text-white font-medium py-2 mt-2" disabled={loading}>
           {loading ? "Entrando..." : "Entrar"}
         </button>
       </form>
@@ -93,11 +96,10 @@ export default function LoginPage() {
       <button
         onClick={handleGoogleLogin}
         disabled={loading}
-        className="w-full border py-2 flex items-center justify-center gap-2"
+        className="w-[94%] border ml-2 mr-2 py-2 flex items-center justify-center gap-2 "
       >
-        <img src="/google.svg" alt="Google" className="w-5 h-5" />
-        Continuar con Google
+        <FaGoogle className="w-5 h-5 text-red-700" /><h1 className="text-red-600 font-semibold">Continuar con Google</h1>
       </button>
-    </div>
+    </div >
   )
 }
