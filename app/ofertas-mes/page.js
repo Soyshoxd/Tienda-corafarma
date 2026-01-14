@@ -13,7 +13,6 @@ const Page = async () => {
   const productos = await getProductos()
   return (
     <div>
-      <Navbar />
       <div className='mt-22 flex gap-4 items-center justify-center'>
         <Image src={Oferta} alt="oferta" />
       </div>
@@ -32,10 +31,12 @@ const Page = async () => {
       </div>
       <div className='mt-22 flex gap-4 items-center justify-center'>
         <div className='w-35 h-35 flex items-center justify-center'>
-          <Carproducto
-            key={producto.id}
-            producto={producto}
-          />
+          {productos.map(producto => (
+            <Carproducto
+              key={producto.id}
+              producto={producto}
+            />
+          ))}
         </div>
         <div className='w-40 h-40 flex items-center justify-center'>
           <Image src={licor} alt='licor' className='mx-auto' />
@@ -46,10 +47,12 @@ const Page = async () => {
           <Image src={maquillaje} alt='maquillaje' className='mx-auto' />
         </div>
         <div className='w-35 h-35 flex items-center justify-center'>
-          <Carproducto
-            key={producto.id}
-            producto={producto}
-          />
+          {productos.map(producto => (
+            <Carproducto
+              key={producto.id}
+              producto={producto}
+            />
+          ))}
         </div>
       </div>
       <div className='mt-10'>

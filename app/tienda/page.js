@@ -10,7 +10,6 @@ const Page = async () => {
   const productos = await getProductos()
   return (
     <div>
-      <Navbar />
       <div className='ml-2 text-xs text-neutral-600 mt-24'>
         <h1>Inicio | Tienda | Licores</h1>
       </div>

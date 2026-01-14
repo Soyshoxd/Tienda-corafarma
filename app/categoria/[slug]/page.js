@@ -24,7 +24,6 @@ export default async function CategoriaPage({ params }) {
     const productos = await getProductos({ categoriaId: slug })
     return (
         <div className="bg-gray-100 bg-cover bg-center bg-no-repeat bg-[url('/assets/fondo.png')] h-dvh">
-            <Navbar />
             <div className="mt-21">
                 <div className='ml-2 text-xs text-neutral-600'>
                     <h1>Inicio | Tienda | Licores</h1>
